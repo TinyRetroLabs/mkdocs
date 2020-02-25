@@ -30,6 +30,9 @@ LABEL \
 	org.label-schema.version=$BUILD_VERSION \
 	org.label-schema.docker.cmd="docker run -it --rm -p 8000:8000 -v ${pwd}:/docs tinyretrolabs/mkdocs"
 
+# Expose server port
+EXPOSE 8000
+
 # Set the entry point
 ENTRYPOINT ["mkdocs"]
 
