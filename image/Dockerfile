@@ -1,9 +1,5 @@
 FROM alpine:latest
 MAINTAINER Marcus Andrade "boogermann@tinyretrolabs.org"
-
-# Metadata Params
-ARG BUILD_DATE
-ARG VCS_REF
 ARG BUILD_VERSION
 
 # Core Developement Packages
@@ -20,6 +16,8 @@ VOLUME /docs
 WORKDIR /docs
 
 # Metadata
+ARG BUILD_DATE
+ARG VCS_REF
 LABEL \
 	org.label-schema.schema-version="1.0" \
 	org.label-schema.vendor="tinyretrolabs.org" \
